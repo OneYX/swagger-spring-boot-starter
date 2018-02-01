@@ -44,6 +44,7 @@ import java.util.stream.Collectors;
 @EnableSwagger2
 @Import({BeanValidatorPluginsConfiguration.class})
 @EnableConfigurationProperties(SwaggerProperties.class)
+@ConditionalOnProperty(prefix = SwaggerProperties.SWAGGER_PREFIX, name = "enabled", matchIfMissing = true)
 public class SwaggerAutoConfiguration implements BeanFactoryAware{
 
     private BeanFactory beanFactory;
@@ -55,7 +56,6 @@ public class SwaggerAutoConfiguration implements BeanFactoryAware{
 
     @Bean
     @ConditionalOnMissingBean
-    @ConditionalOnProperty(prefix = SwaggerProperties.SWAGGER_PREFIX, name = "enabled", matchIfMissing = true)
     public List<Docket> createRestApi(SwaggerProperties swaggerProperties) {
         ConfigurableBeanFactory configurableBeanFactory = null;
         if (beanFactory instanceof ConfigurableBeanFactory) {
