@@ -4,7 +4,7 @@
 
 	<groupId>com.github.oneyx</groupId>
 	<artifactId>swagger-spring-boot-starter</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>swagger-spring-boot-starter</name>
@@ -32,7 +32,7 @@
 		<url>https://github.com/OneYX/swagger-spring-boot-starter/tree/master</url>
 		<connection>scm:git:git@github.com:OneYX/swagger-spring-boot-starter.git</connection>
 		<developerConnection>scm:git:git@github.com:OneYX/swagger-spring-boot-starter.git</developerConnection>
-	  <tag>v1.0.0</tag>
+	  <tag>v1.0.1</tag>
   </scm>
 
 	<properties>
